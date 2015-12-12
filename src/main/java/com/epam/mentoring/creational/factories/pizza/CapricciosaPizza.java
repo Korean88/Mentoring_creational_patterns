@@ -1,16 +1,9 @@
 package com.epam.mentoring.creational.factories.pizza;
 
-import com.epam.mentoring.creational.factories.abstractfactory.inf.IPizzaIngredientsFactory;
-
 public class CapricciosaPizza extends AbstractPizza {
 
-	public CapricciosaPizza() {
-	}
-
-	public CapricciosaPizza(double weight, String price, IPizzaIngredientsFactory abstractFactory) {
-		setWeight(weight);
-		setPrice(price);
-		prepareIngredients(abstractFactory);
+	public CapricciosaPizza(double weight, String price) {
+		super(weight, price);
 	}
 
 	@Override

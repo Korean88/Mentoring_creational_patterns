@@ -1,18 +1,18 @@
 package com.epam.mentoring.creational.factories.pizzastore;
 
-import com.epam.mentoring.creational.factories.factorymethod.inf.IPizzaFactoryMethod;
+import com.epam.mentoring.creational.factories.factorymethod.impl.PizzaFactoryMethod;
 import com.epam.mentoring.creational.factories.pizza.AbstractPizza;
 import com.epam.mentoring.creational.factories.pizza.PizzaSize;
 
 public class PizzaStore {
 	
-	private IPizzaFactoryMethod factory;
+	private PizzaFactoryMethod factory;
 	
-	public PizzaStore(IPizzaFactoryMethod factory) {
+	public PizzaStore(PizzaFactoryMethod factory) {
 		this.factory = factory;
 	}
 
-	public void setFactory(IPizzaFactoryMethod factory) {
+	public void setFactory(PizzaFactoryMethod factory) {
 		this.factory = factory;
 	}
 

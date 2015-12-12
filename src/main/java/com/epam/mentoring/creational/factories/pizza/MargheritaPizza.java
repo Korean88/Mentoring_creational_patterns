@@ -1,18 +1,11 @@
 package com.epam.mentoring.creational.factories.pizza;
 
-import com.epam.mentoring.creational.factories.abstractfactory.inf.IPizzaIngredientsFactory;
-
 public class MargheritaPizza extends AbstractPizza {
-
-	public MargheritaPizza(double weight, String price, IPizzaIngredientsFactory abstractFactory) {
-		setWeight(weight);
-		setPrice(price);
-		prepareIngredients(abstractFactory);
-	}
-
-	public MargheritaPizza() {
-	}
 	
+	public MargheritaPizza(double weight, String price) {
+		super(weight, price);
+	}
+
 	@Override
 	public String toString() {
 		return "MargheritaPizza " + super.toString();

@@ -2,7 +2,6 @@ package com.epam.mentoring.creational.factories.pizza;
 
 import java.util.Arrays;
 
-import com.epam.mentoring.creational.factories.abstractfactory.inf.IPizzaIngredientsFactory;
 import com.epam.mentoring.creational.factories.abstractfactory.ingredients.Ingredient;
 
 public abstract class AbstractPizza {
@@ -10,6 +9,14 @@ public abstract class AbstractPizza {
 	private double weight;
 	private String price;
 	private Ingredient[] ingredients;
+	
+	public AbstractPizza() {
+	}
+	
+	public AbstractPizza(double weight, String price) {
+		this.weight = weight;
+		this.price = price;
+	}
 
 	public double getWeight() {
 		return weight;
@@ -41,15 +48,5 @@ public abstract class AbstractPizza {
 	}
 
 	public abstract void serve();
-
-	public void prepareIngredients(IPizzaIngredientsFactory abstractFactory) {
-		Ingredient[] ingredients = new Ingredient[] { 
-				abstractFactory.prepareDough(), 
-				abstractFactory.prepareCheese(),
-				abstractFactory.prepareSauce(), 
-				abstractFactory.prepareToppings() 
-		};
-		setIngredients(ingredients);
-	}
 
 }
